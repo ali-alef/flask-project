@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>to do list</h1>
+    {% for task in tasks%}
+        <h4>{{ task.content }} <a href="/update/{{ task.id }}">update</a> <a href="/delete/{{ task.id }}">Delete</a> </h4>
+    {% endfor %}
+    <a href="/add">add</a>
+{% endblock %}
